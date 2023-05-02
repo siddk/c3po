@@ -1,6 +1,6 @@
 # C3PO
 
-> *C3PO*: <u>C</u>ore <u>C</u>ontent Management & <u>C</u>leaning Repository for <u>P</u>ostprocessing and <<u>O</u>rganization
+> *C3PO*: <u>C</u>ore <u>C</u>ontent Management & <u>C</u>leaning Repository for <u>P</u>ostprocessing and <u>O</u>rganization
 
 Companion Codebase to [R2D2](https://github.com/AlexanderKhazatsky/R2D2); core codebase for any data management,
 cleaning, and postprocessing/annotation for the robot trajectory data collected as part of the large-scale multi-lab 
