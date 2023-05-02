@@ -1,23 +1,19 @@
 # C3PO
 
-> *C3PO*: R2D2 Core Content Management and Cleaning Repository for Post-Processing and Organization
+> *C3PO*: <u>C</u>ore <u>C</u>ontent Management & <u>C</u>leaning Repository for <u>P</u>ostprocessing and <<u>O</u>rganization
 
-Package repository for C3PO: C3PO -- Core Content Management and Cleaning Repository for Post-Processing and Organization for R2D2.
+Companion Codebase to [R2D2](https://github.com/AlexanderKhazatsky/R2D2); core codebase for any data management,
+cleaning, and postprocessing/annotation for the robot trajectory data collected as part of the large-scale multi-lab 
+data collection effort.
 
-Built with [PyTorch](https://pytorch.org/), using sane quality defaults (`black`, `ruff`, `pre-commit`).
+Built with Python 3.8, using sane quality defaults (`black`, `ruff`, `pre-commit`).
 
 ---
 
 ## Installation
 
-This repository is built on top of PyTorch; while specified as a dependency for the package, we highly recommend that
-you install the desired version of PyTorch (e.g., with accelerator support) for your given hardware and dependency
-manager (e.g., `conda`). Otherwise, the default installed version be incompatible.
-
-PyTorch installation instructions [can be found here](https://pytorch.org/get-started/locally/). This repository
-requires PyTorch >= 2.0, but has only been thoroughly tested with PyTorch 2.0.0, Torchvision 0.15.0, Torchaudio 0.14.0.
-
-Once PyTorch has been properly installed, you can install this package locally via an editable installation:
+With Python 3.8 as your default Python version (e.g., in a virtualenv, Conda environment, or Docker) you can install 
+this package locally via an editable installation:
 
 ```bash
 git clone https://github.com/siddk/c3po
@@ -59,10 +55,9 @@ Additional Contribution Notes:
 
 High-level overview of repository/project file-tree:
 
-+ `docs/` - Package documentation - including project roadmap, additional notes (if any).
-+ `c3po` - Package source code; has all core utilities for model specification, loading,
-                               preprocessing, etc.
-+ `scripts/` - Standalone scripts for various functionality (e.g., training).
++ `docs/` - Package documentation - including key design choices and additional notes.
++ `c3po` - Package source code; has all core utilities for data munging, uploading, cleaning, and postprocessing.
++ `scripts/` - Standalone scripts for various functionality (e.g., uploading data to S3).
 + `.gitignore` - Default Python `.gitignore`.
 + `.pre-commit-config.yaml` - Pre-commit configuration file (sane defaults + `black` + `ruff`).
 + `LICENSE` - By default, research code is made available under the MIT License; if changing, think carefully about why!

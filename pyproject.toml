@@ -5,13 +5,14 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "c3po"
 authors = [
-    {name = "Siddharth Karamcheti", email="skaramcheti@cs.stanford.edu"}
+    {name = "Siddharth Karamcheti", email="skaramcheti@cs.stanford.edu"},
+    {name = "Alexander Khazatsky", email="alexkhaz@stanford.edu"}
 ]
 description = "C3PO: R2D2 Core Content Management and Cleaning Repository for Post-Processing and Organization"
 version = "0.0.1"
 readme = "README.md"
-requires-python = ">=3.8"
-keywords = ["machine learning"]
+requires-python = ">=3.7"
+keywords = ["data analysis", "data curation", "visualization"]
 license = {file = "LICENSE"}
 classifiers = [
     "Development Status :: 3 - Alpha",
@@ -21,16 +22,17 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
     "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3 :: Only",
     "Topic :: Scientific/Engineering :: Artificial Intelligence",
 ]
 dependencies = [
-    "torch",
-    "torchvision",
-    "torchaudio",
+    "gdown",
+    "h5py",
+    'opencv-python==4.6.0.66',
+    'opencv-contrib-python==4.6.0.66',
+    "pyrallis",
 ]
 
 [project.optional-dependencies]
@@ -48,9 +50,17 @@ documentation = "https://github.com/siddk/c3po"
 
 [tool.black]
 line-length = 121
-target-version = ["py38", "py39", "py310"]
+target-version = ["py37", "py38"]
 preview = true
 
 [tool.ruff]
 line-length = 121
 target-version = "py38"
+select = ["A", "B", "C90", "E", "F", "I", "RUF", "W"]
+
+[tool.ruff.per-file-ignores]
+"__init__.py" = ["E402", "F401"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+exclude = ["cache", "scratch"]
